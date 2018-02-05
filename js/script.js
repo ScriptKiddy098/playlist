@@ -43,21 +43,27 @@ var myPlayList = [
 		"image-url":"http://assets-s3.usmagazine.com/uploads/assets/articles/93827-justin-biebers-sorry-choreographer-spills-video-style-secrets-parris-goebel/1445638548_justin-bieber-sorry-dancers-zoom.jpg",
 	}
 
-]
-
+] 
 
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
-  
-
-
+  displayList(); 
 
 });
 
 function displayList(){
+	var i; 
+	for( i = 0; i < myPlayList.length; i++){
+		var song = myPlayList[i]; 
+		$(".songs").append(song.title);
+		$(".songs").append(song.artist);
+		$(".songs").append(song['mp3-url']);
+		$(".songs").append('<img src="'+song['image-url']+'" />');
 
 
+
+	}
   
 }
 
@@ -68,7 +74,7 @@ function clearList(){
 }
 
 function addSong(){
- 
+ $
   
   
 }
